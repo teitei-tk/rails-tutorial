@@ -1,4 +1,4 @@
-@app_path = ENV['app_path']
+@app_path = "/vagrant/example"
 
 worker_processes 2
 working_directory "#{@app_path}/"
