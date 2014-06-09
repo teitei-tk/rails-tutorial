@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin/index'
+
   get 'roots/admin'
 
   namespace :admin do
