@@ -41,6 +41,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'devise'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
