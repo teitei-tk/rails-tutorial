@@ -1,4 +1,7 @@
-@app_path = "/vagrant/example"
+require 'yaml'
+
+setting = YAML.load_file('config/setting.yml')
+@app_path = setting[ENV['RAILS_ENV']]['app_path']
 
 worker_processes 2
 working_directory "#{@app_path}/"
