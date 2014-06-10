@@ -1,0 +1,22 @@
+defaults: &defaults
+  db_username: hoge
+  db_password: fuga
+  db_host: example.com
+  app_path: /path/to/dir
+  app_host: example.com
+  email: test@example.com
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+  email: test@example.com
+
+production:
+  <<: *defaults
+  email: info@example.com
+  db_username: foo
+  db_password: bar
+  app_path: /path/to/production
+  secret: xsDLRA2zeZTkXJEnf7zpTtJPbqubTe
