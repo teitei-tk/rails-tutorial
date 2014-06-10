@@ -14,3 +14,7 @@
  *= require_self
  *= require bootstrap
  */
+
+.main {
+    padding-top: 50px;
+}

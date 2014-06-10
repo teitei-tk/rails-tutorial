@@ -4,12 +4,12 @@ Rails.application.routes.draw do
   get 'roots/admin'
 
   namespace :admin do
-  get 'root/index'
+    get 'root/index'
   end
 
   root :to => 'roots#index'
 
-  devise_for :users
+  devise_for :users 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
