@@ -7,6 +7,14 @@
     padding-bottom: 40px;
     background-color: #f5f5f5;
 
+    .devise-error-message {
+        padding: 10px;
+        color: #F0AD4E;
+        margin: 10px auto;
+        width: 650px;
+        text-align: center;
+    }
+
     .admin-signin-form {
         max-width: 300px;
         padding: 19px 29px 29px;

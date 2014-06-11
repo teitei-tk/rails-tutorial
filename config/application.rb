@@ -22,6 +22,10 @@ module Example
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     
+    # bootstrap font path
     config.assets.paths << "#{Rails}/vender/assets/fonts"
+
+    # default locale
+    config.i18n.default_locale = :ja
   end
 end
