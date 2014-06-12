@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin/post'
+
   get 'admin/index'
 
   get 'roots/admin'
