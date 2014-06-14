@@ -26,6 +26,12 @@
                 <li class="active">
                     <%= link_to "Home", root_path %>
                 </li>
+                    
+                <% if signed_in? %>
+                <li>
+                    <%= link_to "AdminPage", admin_index_path %>
+                </li>
+                <% end %>
                 <li>
                     <% if signed_in? %>
                         <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
@@ -34,7 +40,6 @@
                         <%= link_to "Sign In", new_user_session_path %>
 
                     <% end %>
-
                 </li>
             </ul>
           </div><!--/.nav-collapse -->
