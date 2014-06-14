@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
-  get 'admin/post'
-
+  get 'admin/new'
   get 'admin/index'
+  get 'admin/create'
 
   get 'roots/admin'
-
-  namespace :admin do
-    get 'root/index'
-  end
 
   root :to => 'roots#index'
 

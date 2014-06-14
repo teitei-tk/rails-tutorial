@@ -1,0 +1,21 @@
+<div class="admin-post-wrapper">
+    <h1>Admin#new</h1>
+
+    <div class="admin-post-form">
+        <h1>Add New</h1>
+
+        <%= form_for @entry do |f| %>
+
+        <p>
+            <%= f.label :title %><br>
+            <%= f.text_field :title %>
+        </p>
+
+        <p>
+            <%= f.submit %>
+        </p>
+
+        <% end %>
+    </div>
+</div>
+

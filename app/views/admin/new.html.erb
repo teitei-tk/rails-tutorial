@@ -1,0 +1,22 @@
+<div class="admin-post-wrapper">
+    <h1>Admin#new</h1>
+
+    <div class="admin-post-form">
+        <%= form_for @entry, :url => admin_create_path do |f| %>
+            <p>
+                <%= f.label :title %><br>
+                <%= f.text_field :title %>
+            </p>
+
+            <p>
+                <%= f.label :content %><br>
+                <%= f.text_area :content %>
+            </p>
+
+            <p>
+                <%= f.submit %>
+            </p>
+        <% end %>
+    </div>
+</div>
+

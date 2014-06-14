@@ -4,6 +4,10 @@ class AdminController < ApplicationController
   def index
   end
 
-  def post
+  def new
+    @entry = Entry.new
+  end
+
+  def create
   end
 end
