@@ -43,6 +43,10 @@
                 </li>
             </ul>
           </div><!--/.nav-collapse -->
+
+          <% if controller.controller_name == "admin" %>
+              <%= render "sidebar" %>
+          <% end %>
         </div>
       </div>
       <div class="container">
