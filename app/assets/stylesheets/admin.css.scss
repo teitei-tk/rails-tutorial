@@ -15,6 +15,22 @@
     overflow-y: auto;
     background-color: #f5f5f5;
     border-right: 1px solid #eee;
+
+    .nav-sidebar {
+        li > a {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    }
+
+    .nav-sidebar {
+        .active{
+            a {
+                color: #fff;
+                background-color: #428bca;
+            }
+        }
+    }
 }
 
 .admin-signin-wrapper {
