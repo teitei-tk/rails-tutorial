@@ -27,3 +27,5 @@ config/secrets.yml
 
 config/setting.yml
 .sass-cache/
+
+node_modules/

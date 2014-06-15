@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/teitei-tk/rails-tutorial/issues"
   },
-  "homepage": "https://github.com/teitei-tk/rails-tutorial"
+  "homepage": "https://github.com/teitei-tk/rails-tutorial",
+  "devDependencies": {
+    "markdown": "^0.5.0"
+  }
 }
