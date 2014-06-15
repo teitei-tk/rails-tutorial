@@ -1,0 +1,22 @@
+{
+  "name": "MyRailsTutorial",
+  "version": "0.0.0",
+  "description": "MyRailsTutorial",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/teitei-tk/rails-tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teitei-tk/rails-tutorial/issues"
+  },
+  "homepage": "https://github.com/teitei-tk/rails-tutorial"
+}
