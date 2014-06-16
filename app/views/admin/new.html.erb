@@ -7,18 +7,23 @@
         <%= form_for @entry, :url => admin_create_path do |f| %>
             <p>
                 <%= f.label :title %><br>
-                <%= f.text_field :title %>
+                <%= f.text_field :title, :class => "title" %>
             </p>
 
             <p>
                 <%= f.label :content %><br>
-                <%= f.text_area :content %>
+                <%= f.text_area :content, :class => "content" %>
             </p>
 
             <p>
                 <%= f.submit %>
             </p>
         <% end %>
+    </div>
+
+    <div class="admin-post-preview">
+        <div id="entryTitle"></div>
+        <div id="preview"></div>
     </div>
 </div>
 

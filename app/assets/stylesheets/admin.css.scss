@@ -66,3 +66,30 @@
     }
 
 }
+
+.admin-post-wrapper {
+    .admin-post-form {
+        float: left; 
+    }
+
+    .admin-post-preview {
+        width: 500px;
+        float: right;
+
+        #entryTitle {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+
+            display: none;
+            padding: 15px;
+        }
+
+        #preview {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+
+            display: none;
+            padding: 15px;
+        }
+    }
+}
