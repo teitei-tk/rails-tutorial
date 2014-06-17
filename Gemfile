@@ -45,6 +45,8 @@ gem 'devise'
 
 gem 'compass-rails'
 
+gem 'vuejs-rails'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
