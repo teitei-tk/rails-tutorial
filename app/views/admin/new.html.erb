@@ -4,15 +4,23 @@
     <h1>Admin#new</h1>
 
     <div class="admin-post-form">
-        <%= form_for @entry, :url => admin_create_path do |f| %>
+        <%= form_for @entry, :url => admin_create_path, :id => "previewForm" do |f| %>
             <p>
                 <%= f.label :title %><br>
-                <%= f.text_field :title, :class => "title" %>
+                <%= f.text_field :title, { 
+                    "v-on" => "keyup: preview", 
+                    "class" => "title", 
+                    "data-preview-selector" => "#entryTitle" 
+                } %>
             </p>
 
             <p>
                 <%= f.label :content %><br>
-                <%= f.text_area :content, :class => "content" %>
+                <%= f.text_area :content, { 
+                    "v-on" => "keyup: preview", 
+                    "class" => "content",
+                    "data-preview-selector" => "#preview"
+                } %>
             </p>
 
             <p>
