@@ -13,12 +13,33 @@ $ ->
 
     content = new Vue
         el: ".admin-post-form"
+        created: (e) ->
+            console.log "dom loading finish"
         data:
             previewAreaMap:
                 entry_title: "#entryTitle"
                 entry_content: "#preview"
+            entry:
+                title: ''
+                content: ''
+            validation:
+                title: false
+                content: false
+        filters:
+            titleValidator: (val) ->
+                @.validation.title = !!val
+                return val
+            contentValidator: (val) ->
+                @.validation.content = !!val
+                return val
+
         methods:
             preview: (e) ->
                 $input    = $ e.target
-                $textArea = $ @.$data.previewAreaName[e.target.id]
+                $textArea = $ @.$data.previewAreaMap[e.target.id]
                 markdownPreview.preview($input, $textArea)
+
+            submitValidation: (e) ->
+                if @.validation.title  and @.validation.content
+                    return true
+                e.preventDefault()

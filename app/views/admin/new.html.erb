@@ -4,15 +4,23 @@
     <h1>Admin#new</h1>
 
     <div class="admin-post-form">
-        <%= form_for @entry, :url => admin_create_path, :id => "previewForm" do |f| %>
+        <div class="admin-post-errors">
+            <ul class="errors bg-warning">
+                <li class="warning" v-show="!validation.title">title is empty, enter a title</li>
+                <li class="warning" v-show="!validation.content">content is empty, enter a content</li>
+            </ul>
+        </div>
+
+
+        <%= form_for @entry, :url => admin_create_path, :id => "previewForm", :html => { "v-on" => "submit: submitValidation" } do |f| %>
             <p>
                 <%= f.label :title %><br>
-                <%= f.text_field :title, { "v-on" => "keyup: preview", "class" => "title" } %>
+                <%= f.text_field :title, { "v-on" => "keyup: preview", "v-model" => "entry.title | titleValidator", "class" => "title" } %>
             </p>
 
             <p>
                 <%= f.label :content %><br>
-                <%= f.text_area :content, { "v-on" => "keyup: preview", "class" => "content" } %>
+                <%= f.text_area :content, { "v-on" => "keyup: preview", "v-model" => "entry.content | contentValidator", "class" => "content" } %>
             </p>
 
             <p>
