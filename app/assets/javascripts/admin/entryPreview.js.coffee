@@ -13,7 +13,12 @@ $ ->
 
     content = new Vue
         el: ".admin-post-form"
+        data:
+            previewAreaMap:
+                entry_title: "#entryTitle"
+                entry_content: "#preview"
         methods:
             preview: (e) ->
-                $input   = $ e.target
-                markdownPreview.preview($input, $ $input.attr "data-preview-selector" )
+                $input    = $ e.target
+                $textArea = $ @.$data.previewAreaName[e.target.id]
+                markdownPreview.preview($input, $textArea)
