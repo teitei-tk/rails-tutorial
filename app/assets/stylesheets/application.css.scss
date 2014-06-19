@@ -15,8 +15,9 @@
  *= require bootstrap
  */
 
-@import "compass";
-
-.main {
-    padding-top: 50px;
+.wrapper {
+    .main {
+        padding-top: 50px;
+    }
 }
+

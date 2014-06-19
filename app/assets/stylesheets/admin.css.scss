@@ -68,12 +68,48 @@
 }
 
 .admin-post-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+
+
+    .admin-post-errors {
+        .errors {
+            width: 85%;
+            border: 1px solid #f0ad4e;
+            text-align: center;
+
+            .msg {
+                padding: 5px 0;
+            }
+        }
+    }
+
     .admin-post-form {
+        width: 50%;
         float: left; 
+
+        #new_entry {
+            .form-content {
+                padding-bottom: 30px;
+
+                .title {
+                    width: 400px;
+                }
+
+                .content {
+                    width: 400px;
+                    height: 400px;
+                }
+
+                .submit {
+                    margin-top: 15px;
+                }
+            }
+        }
     }
 
     .admin-post-preview {
-        width: 500px;
+        width: 50%;
         float: right;
 
         #entryTitle {
@@ -91,5 +127,6 @@
             display: none;
             padding: 15px;
         }
+
     }
 }

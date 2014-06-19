@@ -1,41 +1,49 @@
 <div class="admin-post-wrapper">
     <%= javascript_include_tag "markdown.js" %>
 
-    <h1>Admin#new</h1>
+    <h1>NewPostForm</h1>
 
     <div class="admin-post-form">
         <div class="admin-post-errors">
             <ul class="errors bg-warning">
-                <li class="warning" v-show="!validation.title">title is empty, enter a title</li>
-                <li class="warning" v-show="!validation.content">content is empty, enter a content</li>
+                <li class="warning msg" v-show="!validation.title">title is empty, enter a title</li>
+                <li class="warning msg" v-show="!validation.content">content is empty, enter a content</li>
             </ul>
         </div>
 
 
-        <%= form_for @entry, :url => admin_create_path, :id => "previewForm", :html => { "v-on" => "submit: submitValidation", "role" => "form", "class" => "form-horizontal" } do |f| %> 
+        <%= form_for @entry, :url => admin_create_path, :html => { "v-on" => "submit: submitValidation", "role" => "form" } do |f| %> 
             <div class="form-group">
-                <p>
+                <div class="form-content">
                     <%= f.label :title, { "class" => "col-sm-2 control-label" } %>
                     <div class="col-sm-10">
                         <%= f.text_field :title, { "v-on" => "keyup: preview", "v-model" => "entry.title | titleValidator", "class" => "title form-control", "placeholder" => "title" } %>
                     </div>
-                </p>
+                </div>
             </div>
 
             <div class="form-group">
-                <p>
-                    <%= f.label :content, { "class" => "col-sm-2 control-label" } %>
-                    <div class="col-sm-10">
-                        <%= f.text_area :content, { "v-on" => "keyup: preview", "v-model" => "entry.content | contentValidator", "class" => "content form-control", "row" => 10 } %>
-                    </div>
-                </p>
-            </div>
-
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
+                <div class="form-content">
                     <p>
-                        <%= f.submit :submit, { "class" => "btn btn-primary"} %>
+                        <%= f.label :content, { "class" => "col-sm-2 control-label" } %>
+                        <div class="col-sm-10">
+                            <%= f.text_area :content, {
+                                "v-on" => "keyup: preview", "v-model" => "entry.content | contentValidator",
+                                "class" => "content form-control", "row" => 10,
+                                "placeholder" => "content"
+                            } %>
+                        </div>
                     </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-content">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <p>
+                            <%= f.submit :submit, { "class" => "submit btn btn-primary"} %>
+                        </p>
+                    </div>
                 </div>
             </div>
 
