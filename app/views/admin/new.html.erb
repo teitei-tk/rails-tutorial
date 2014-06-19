@@ -12,20 +12,33 @@
         </div>
 
 
-        <%= form_for @entry, :url => admin_create_path, :id => "previewForm", :html => { "v-on" => "submit: submitValidation" } do |f| %>
-            <p>
-                <%= f.label :title %><br>
-                <%= f.text_field :title, { "v-on" => "keyup: preview", "v-model" => "entry.title | titleValidator", "class" => "title" } %>
-            </p>
+        <%= form_for @entry, :url => admin_create_path, :id => "previewForm", :html => { "v-on" => "submit: submitValidation", "role" => "form", "class" => "form-horizontal" } do |f| %> 
+            <div class="form-group">
+                <p>
+                    <%= f.label :title, { "class" => "col-sm-2 control-label" } %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :title, { "v-on" => "keyup: preview", "v-model" => "entry.title | titleValidator", "class" => "title form-control", "placeholder" => "title" } %>
+                    </div>
+                </p>
+            </div>
 
-            <p>
-                <%= f.label :content %><br>
-                <%= f.text_area :content, { "v-on" => "keyup: preview", "v-model" => "entry.content | contentValidator", "class" => "content" } %>
-            </p>
+            <div class="form-group">
+                <p>
+                    <%= f.label :content, { "class" => "col-sm-2 control-label" } %>
+                    <div class="col-sm-10">
+                        <%= f.text_area :content, { "v-on" => "keyup: preview", "v-model" => "entry.content | contentValidator", "class" => "content form-control", "row" => 10 } %>
+                    </div>
+                </p>
+            </div>
 
-            <p>
-                <%= f.submit %>
-            </p>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <p>
+                        <%= f.submit :submit, { "class" => "btn btn-primary"} %>
+                    </p>
+                </div>
+            </div>
+
         <% end %>
     </div>
 
