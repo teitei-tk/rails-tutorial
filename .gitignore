@@ -29,3 +29,5 @@ config/setting.yml
 .sass-cache/
 
 node_modules/
+
+public/assets/**
