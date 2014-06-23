@@ -2,10 +2,12 @@ class MarkdownPreview
     preview: ($input, $preview) ->
         text = $input.val().trim()
         if text.length <= 0
+            @.$previewRoot.hide()
             $preview.hide()
             return false
         else
             $preview.show()
+
         $preview.html markdown.toHTML(text)
 
 $ ->
@@ -35,6 +37,12 @@ $ ->
 
         methods:
             preview: (e) ->
+                $errors = $ "ul.errors"
+                if not @.validation.title or not @.validation.content
+                    $errors.show()
+                else
+                    $errors.hide()
+
                 $input    = $ e.target
                 $textArea = $ @.$data.previewAreaMap[e.target.id]
                 markdownPreview.preview($input, $textArea)

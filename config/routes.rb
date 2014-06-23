@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'admin/new'
   get 'admin/index'
-  get 'admin/create'
+  post 'admin/create'
 
   get 'roots/admin'
 

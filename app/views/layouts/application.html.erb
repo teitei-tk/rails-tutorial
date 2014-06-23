@@ -44,13 +44,14 @@
                     </ul>
                 </div><!--/.nav-collapse -->
 
-                <% if controller.controller_name == "admin" %>
-                  <%= render "sidebar" %>
-                <% end %>
             </div>
         </div>
 
         <div class="wrapper">
+            <% if controller.controller_name == "admin" %>
+              <%= render "sidebar" %>
+            <% end %>
+
             <div class="main">
                 <%= yield %>
             </div>

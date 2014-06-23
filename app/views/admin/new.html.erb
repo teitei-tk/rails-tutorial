@@ -1,11 +1,23 @@
 <div class="admin-post-wrapper">
     <%= javascript_include_tag "markdown.js" %>
 
-    <h1>NewPostForm</h1>
-
     <div class="admin-post-form">
-        <div class="admin-post-errors">
-            <ul class="errors bg-warning">
+        <h1>NewPostForm</h1>
+
+        <div class="admin-post-messages">
+            <% if flash.notice %>
+                <div class="messages bg-success">
+                    <%= flash.notice %>
+                </div>
+            <% end %>
+
+            <% if flash.alert %>
+                <div class="messages bg-danger">
+                    <%= flash.alert %>
+                </div>
+            <% end %>
+
+            <ul class="messages errors bg-warning">
                 <li class="warning msg" v-show="!validation.title">title is empty, enter a title</li>
                 <li class="warning msg" v-show="!validation.content">content is empty, enter a content</li>
             </ul>
@@ -51,8 +63,8 @@
     </div>
 
     <div class="admin-post-preview">
-        <div id="entryTitle"></div>
-        <div id="preview"></div>
+        <div class="previewEntities" id="entryTitle"></div>
+        <div class="previewEntities" id="preview"></div>
     </div>
 </div>
 
