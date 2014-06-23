@@ -2,7 +2,6 @@ class MarkdownPreview
     preview: ($input, $preview) ->
         text = $input.val().trim()
         if text.length <= 0
-            @.$previewRoot.hide()
             $preview.hide()
             return false
         else
