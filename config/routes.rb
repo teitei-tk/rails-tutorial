@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
-  get 'admin/new'
-  get 'admin/index'
-  post 'admin/create'
-
-  get 'roots/admin'
-
+  # roots
   root :to => 'roots#index'
+  get   'roots/admin'
 
+  # admin
+  get   'admin/new'
+  get   'admin/index'
+  post  'admin/create'
+  
+  # entries
+  get   'entries/index'
+  get   'entries/show'
+
+  # auth gem
   devise_for :users 
 
   # The priority is based upon order of creation: first created -> highest priority.
