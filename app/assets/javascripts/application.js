@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require vue
+//= require markdown.js
 //= require_tree .
