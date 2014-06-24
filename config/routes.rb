@@ -9,8 +9,7 @@ Rails.application.routes.draw do
   post  'admin/create'
   
   # entries
-  get   'entries/index'
-  get   'entries/show'
+  resources :entries
 
   # auth gem
   devise_for :users 
