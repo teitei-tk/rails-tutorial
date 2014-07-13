@@ -2,8 +2,6 @@ class Entry
     constructor: ()->
 
 $ ->
-    console.log "fuck"
-    
     content = new Vue
         el: ".contents"
         created: (e) ->

@@ -33,7 +33,6 @@ $ ->
             contentValidator: (val) ->
                 @.validation.content = !!val
                 return val
-
         methods:
             preview: (e) ->
                 $errors = $ "ul.errors"
