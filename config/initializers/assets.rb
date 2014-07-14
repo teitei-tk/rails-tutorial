@@ -1,3 +1,3 @@
 Rails.application.config.assets.precompile += [
-  "markdown.js",
+  "markdown.js", "admin/entryPreview.js", "entries.js"
 ]
