@@ -2,8 +2,9 @@
 <html lang="ja">
     <head>
         <title>Example</title>
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= stylesheet_link_tag    'application', media: 'all' %>
         <%= csrf_meta_tags %>
+        <%= javascript_include_tag 'application' %>
         <meta content="width=device-width, initial-scale=1" name="viewport">
     </head>
     <body>
@@ -55,6 +56,5 @@
                 <%= yield %>
             </div>
         </div><!-- /.container -->
-        <%= javascript_include_tag 'application' %>
     </body>
 </html>

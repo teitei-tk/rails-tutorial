@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require js-lib/app.js
-//= require turbolinks
 //= require bootstrap
 //= require vue
 //= require markdown.js

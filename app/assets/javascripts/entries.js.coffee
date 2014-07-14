@@ -1,11 +1,16 @@
-class Entry
-    constructor: ()->
-
 $ ->
     content = new Vue
-        el: ".contents"
+        el: ".root-index-wrapper"
         created: (e) ->
             console.log "content load finish"
         data:
-            title: "hoge"
-            content: "content"
+            contents: [
+                {
+                    title: "hoge"
+                    content: "test"
+                }
+                {
+                    title: "hoge"
+                    content: "test"
+                }
+            ]
