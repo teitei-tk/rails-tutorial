@@ -2,6 +2,7 @@ class Entry
     constructor:(entry) ->
         @title = entry["title"]
         @content = entry["content"]
+        @updatedAt = new Date(entry["updated_at"]).format("YYYY/MM/DD hh:mm")
 
 $ ->
     entitiy = new Vue
