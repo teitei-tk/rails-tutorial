@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post  'admin/create'
   
   # entries
+  get 'entries/detail/:id' => 'entries#detail', :as => :entries
   resources :entries
 
   # auth gem
