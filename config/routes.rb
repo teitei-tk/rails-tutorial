@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   get   'roots/admin'
 
   # admin
-  get   'admin/new'
-  get   'admin/index'
   post  'admin/create'
   
   # entries

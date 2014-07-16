@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   #####################
   # devise sign in path
   #####################
-  def after_sign_in_path_for(resource) 
+  def after_sign_in_path_for resource
     admin_new_path
   end
 end

@@ -11,9 +11,8 @@ $ ->
             contents: []
             message: ""
         method:
-            getPostEntries: (params) ->
+            getPostEntries: (params = {}) ->
                 self = @
-                params = params or {}
                 xhrParam = $.extend {}, params, url: "{0}/entries.json".format App.Config.url
 
                 xhr = $.ajax xhrParam
