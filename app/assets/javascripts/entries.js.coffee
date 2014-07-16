@@ -1,7 +1,7 @@
 class Entry
     constructor:(entry) ->
-        @title = entry["title"]
-        @content = entry["content"]
+        @title =  entry["title"]
+        @content = App.Util.strimwidth markdown.toHTML App.Util.escapeHtml entry["content"]
         @updatedAt = new Date(entry["updated_at"]).format("YYYY/MM/DD hh:mm")
 
 $ ->
@@ -11,8 +11,9 @@ $ ->
             contents: []
             message: ""
         method:
-            getPostEntries: (params = {}) ->
+            getPostEntries: (params) ->
                 self = @
+                params = params or {}
                 xhrParam = $.extend {}, params, url: "{0}/entries.json".format App.Config.url
 
                 xhr = $.ajax xhrParam

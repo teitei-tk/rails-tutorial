@@ -1,11 +1,11 @@
 <div class="root-wrapper">
     <div class="root-index-wrapper">
         <div class="contents" v-repeat="contents">
-            <h2>
+            <h2 v-html="title">
                 {{title}}
             </h2>
 
-            <p class="content">
+            <p class="content" v-html="content">
                 {{content}}
             </p>
 
