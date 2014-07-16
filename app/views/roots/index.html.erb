@@ -1,16 +1,18 @@
 <div class="root-wrapper">
     <div class="root-index-wrapper">
         <div class="contents" v-repeat="contents">
-            <h3>
+            <h2>
                 {{title}}
-            </h3>
+            </h2>
 
             <p class="content">
                 {{content}}
             </p>
 
             <div class="dt">
-                update at <span class="modified">{{updatedAt}}</span>
+                <small>
+                    update at <span class="modified">{{updatedAt}}</span>
+                </small>
             </div>
         </div>
     </div>
