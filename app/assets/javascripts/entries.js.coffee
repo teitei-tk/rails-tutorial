@@ -1,14 +1,18 @@
+detailLink = "<a href='{0}/entries/detail/{1}'>{2}</a>"
+
 class Entry
     constructor:(entry) ->
-        @title =  entry["title"]
-        @content = entry['content']
-        @updatedAt = new Date entry["updated_at"]
+        @id         = entry["id"]
+        @title      = entry["title"]
+        @content    = entry['content']
+        @updatedAt  = new Date entry["updated_at"]
 
         @._validate()
 
     _validate: () ->
-        @content = App.Util.strimwidth markdown.toHTML App.Util.escapeHtml @content
-        @updatedAt = @updatedAt.format "YYYY/MM/DD hh:mm"
+        @title      = detailLink.format App.Config.url, @id, @title
+        @content    = App.Util.strimwidth markdown.toHTML App.Util.escapeHtml @content
+        @updatedAt  = @updatedAt.format "YYYY/MM/DD hh:mm"
 
 $ ->
     entitiy = new Vue
