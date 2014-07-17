@@ -1,8 +1,5 @@
 class Entry extends App.Entry.Format
-    detailLink : "<a href='{0}/entries/detail/{1}'>{2}</a>"
-
     _validate: () ->
-        console.log @
         @title      = @detailLink.format App.Config.url, @id, @title
         @content    = App.Util.strimwidth markdown.toHTML App.Util.escapeHtml @content
         @updatedAt  = @updatedAt.format "YYYY/MM/DD hh:mm"

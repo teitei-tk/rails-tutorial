@@ -2,16 +2,16 @@
 
 <div class="entry-wrapper">
     <div class="entry-detail-wrapper">
-        <h1 class="title">
+        <h1 class="title" v-html="title">
             {{title}}
         </h1>
 
-        <div class="content">
+        <div class="content" v-html="content">
             {{content}}
         </div>
 
-        <div class="updatedAt">
-            {{updatedAt}}
+        <div class="updatedAt" v-html="updatedAt">
+            update at {{updatedAt}}
         </div>
     </div>
 
