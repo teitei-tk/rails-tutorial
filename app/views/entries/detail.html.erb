@@ -1,3 +1,5 @@
+<script type="text/javascript">;(function(){ App.Entry.Detail = new App.Entry.Format(<%= @entry.to_json.html_safe %>); })();</script>
+
 <div class="entry-wrapper">
     <div class="entry-detail-wrapper">
         <h1 class="title">
@@ -12,4 +14,6 @@
             {{updatedAt}}
         </div>
     </div>
+
+    <%= javascript_include_tag 'entry/detail' %>
 </div>

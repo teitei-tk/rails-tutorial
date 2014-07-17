@@ -17,5 +17,6 @@
 //= require vue
 //= require markdown.js
 //= require_tree .
-//= stub entries
+//= stub roots
+//= stub entry/detail
 //= stub admin/entryPreview
