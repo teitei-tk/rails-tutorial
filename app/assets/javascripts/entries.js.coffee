@@ -1,8 +1,14 @@
 class Entry
     constructor:(entry) ->
         @title =  entry["title"]
-        @content = App.Util.strimwidth markdown.toHTML App.Util.escapeHtml entry["content"]
-        @updatedAt = new Date(entry["updated_at"]).format("YYYY/MM/DD hh:mm")
+        @content = entry['content']
+        @updatedAt = new Date entry["updated_at"]
+
+        @._validate()
+
+    _validate: () ->
+        @content = App.Util.strimwidth markdown.toHTML App.Util.escapeHtml @content
+        @updatedAt = @updatedAt.format "YYYY/MM/DD hh:mm"
 
 $ ->
     entitiy = new Vue
