@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   # roots
   root :to => 'roots#index'
-  get   'roots/admin'
 
   # admin
+  get  'admin/new'
   post  'admin/create'
   
   # entries
