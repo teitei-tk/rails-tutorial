@@ -10,21 +10,20 @@ $ ->
         data:
             contents: []
             message: ""
-            offset: 10
-            limit: 10
+            cond:
+                offset: 0
+                limit: 10
         method:
             getPostEntries: (params) ->
                 self = @
-
-                console.log entitiy
-                params = params or {}
-                xhrParam = $.extend {}, params, url: "{0}/entries/entry_by_cond.json".format App.Config.url
+                params = params or
+                    data:
+                        offset: entitiy.$data.cond.offset
+                        limit: entitiy.$data.cond.limit
+                xhrParam = $.extend {}, params, url: "{0}/entries/get_by_cond.json".format App.Config.url
 
                 xhr = $.ajax xhrParam
                 xhr.done (entries) ->
-                    if entries.length <= 0
-                        self.entryNotfound()
-                        return
                     for entry in entries
                         entitiy.$data.contents.push new Entry entry
 

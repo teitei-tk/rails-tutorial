@@ -1,12 +1,12 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [ :show, :detail ]
-  before_action :get_entries, only: [ :entry_by_cond ]
+  before_action :get_entries, only: [ :get_by_cond ]
 
   def index
     @entries = Entry.all
   end
 
-  def entry_by_cond
+  def get_by_cond
   end
 
   def detail
@@ -18,7 +18,7 @@ class EntriesController < ApplicationController
   private
     def get_entries
       limit  = 10
-      offset = 10
+      offset = 0
       params.include? 'limit'
         limit = params[:limit]
       params.include? 'offset'
