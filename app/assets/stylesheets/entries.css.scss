@@ -1,22 +1,21 @@
-.root-wrapper {
-    .root-index-wrapper {
-        .contents {
-            width: 75%;
-            margin: 0 auto;
-            margin-bottom: 75px;
+.entry-wrapper {
+    .entry-detail-wrapper {
+        width: 70%; 
+        margin: 0 auto;
 
-            h2 {
-                padding-bottom: 5px;
-                border-bottom: 1px solid #ddd;
-            }
+        .title {
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
 
-            .content {
-                font-size: 17px;
-            }
+        .content {
+            margin: 10px 0;
+            font-size: 18px;
+        }
 
-            .dt {
-                float: right;
-            }
+        .updatedAt {
+            float: right;
+            font-size: 15px;
         }
     }
 }
