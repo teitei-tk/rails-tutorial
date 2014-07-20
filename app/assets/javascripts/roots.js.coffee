@@ -27,11 +27,5 @@ $ ->
                     for entry in entries
                         entitiy.$data.contents.push new Entry entry
 
-                xhr.fail () ->
-                    self.entryNotfound()
-
-            entryNotfound: ->
-                console.log entitiy
-
     # start render post entry
     entitiy.$options.method.getPostEntries()

@@ -1,22 +1,30 @@
 <div class="root-wrapper">
     <div class="root-index-wrapper">
-        <div class="contents" v-repeat="contents">
-            <h2 v-html="title">
-                {{title}}
-            </h2>
+        <div v-show="contents">
+            <div class="contents" v-repeat="contents">
+                <h2 v-html="title">
+                    {{title}}
+                </h2>
 
-            <p class="content" v-html="content">
-                {{content}}
-            </p>
+                <p class="content" v-html="content">
+                    {{content}}
+                </p>
 
-            <div class="dt">
-                <small>
-                    update at <span class="modified">{{updatedAt}}</span>
-                </small>
+                <div class="dt">
+                    <small>
+                        update at <span class="modified">{{updatedAt}}</span>
+                    </small>
+                </div>
             </div>
+
+            <div class="more" v-on="click:more();">more</div>
         </div>
 
-        <div class="more" v-on="click:more();">more</div>
+        <div class="notContents" v-show="!contents">
+            <p>
+                entry not found, plase <%= link_to "new entry,", admin_new_path %>
+            </p>
+        </div>
     </div>
 
     <%= javascript_include_tag 'roots' %>
