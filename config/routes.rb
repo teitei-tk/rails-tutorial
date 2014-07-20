@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   
   # entries
   get 'entries/detail/:id' => 'entries#detail', :as => :entries
+  get 'entries/entry_by_cond'
   resources :entries
 
   # auth gem
