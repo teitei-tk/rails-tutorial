@@ -10,10 +10,11 @@ $ ->
         data:
             contents: []
             message: ""
+            perpage: 10
             cond:
                 offset: 0
                 limit: 10
-        method:
+        methods:
             getPostEntries: (params) ->
                 self = @
                 params = params or
@@ -26,6 +27,11 @@ $ ->
                 xhr.done (entries) ->
                     for entry in entries
                         entitiy.$data.contents.push new Entry entry
+            more: ->
+                @$data.cond.offset = @$data.cond.offset + @$data.perpage
+                @$data.cond.limit  = @$data.cond.limit  + @$data.perpage
+
+                @.getPostEntries()
 
     # start render post entry
-    entitiy.$options.method.getPostEntries()
+    entitiy.$options.methods.getPostEntries()
