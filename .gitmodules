@@ -3,4 +3,4 @@
 	url = git://github.com/twitter/bootstrap.git
 [submodule "vendor/js-lib"]
 	path = vendor/js-lib
-	url = git@github.com:teitei-tk/js-lib.git
+	url = git://github.com/teitei-tk/js-lib.git
