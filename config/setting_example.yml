@@ -5,6 +5,7 @@ defaults: &defaults
   app_path: /path/to/dir
   app_host: example.com
   email: test@example.com
+  devise_secret_key: hogefuga
 
 development:
   <<: *defaults
@@ -20,3 +21,4 @@ production:
   db_password: bar
   app_path: /path/to/production
   secret: xsDLRA2zeZTkXJEnf7zpTtJPbqubTe
+  devise_secret_key: foobar
