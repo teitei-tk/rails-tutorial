@@ -16,8 +16,10 @@ class EntriesController < ApplicationController
   end
 
   private
+    PER_LIMIT = 10
+
     def get_entries
-      limit  = 10
+      limit  = @PER_LIMIT
       offset = 0
       params.include? 'limit'
         limit = params[:limit]
