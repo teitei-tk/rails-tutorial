@@ -26,7 +26,7 @@ module Example
     config.assets.paths << "#{Rails}/vender/assets/fonts"
 
     # default locale
-    config.i18n.default_locale = :ja
+    config.i18n.default_locale = :en
 
     config.assets.initialize_on_precompile = false
     config.assets.compile = true
