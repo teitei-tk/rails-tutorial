@@ -4,7 +4,7 @@ defaults: &defaults
   db_host: example.com
   app_path: /path/to/dir
   app_host: example.com
-  devise_secret_key: foobar
+  email: test@example.com
 
 development:
   <<: *defaults

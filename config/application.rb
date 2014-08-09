@@ -25,6 +25,9 @@ module Example
     # bootstrap font path
     config.assets.paths << "#{Rails}/vender/assets/fonts"
 
+    # default locale
+    config.i18n.default_locale = :ja
+
     config.assets.initialize_on_precompile = false
     config.assets.compile = true
   end
